@@ -15,6 +15,7 @@ import (
 type NsqConfig struct {
 	Host       string
 	ChanelName string `json:"chanel_name"`
+	TopicName  string `json:"topic_name"`
 }
 
 //

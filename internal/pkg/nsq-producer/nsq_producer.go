@@ -54,7 +54,7 @@ func (np *NsqProducer) newProducer() (err error) {
 }
 
 func (np *NsqProducer) Publish(b []byte) (err error) {
-	err = np.producer.Publish(np.env.Nsq.ChanelName, b)
+	err = np.producer.Publish(np.env.Nsq.TopicName, b)
 	if err != nil {
 		return err
 	}
@@ -63,10 +63,6 @@ func (np *NsqProducer) Publish(b []byte) (err error) {
 
 func (np *NsqProducer) CmdHandler() {
 	scanner := bufio.NewScanner(os.Stdin)
-
-	for i := 0; i < 1000; i++ {
-		np.Publish([]byte("test"))
-	}
 
 	for scanner.Scan() {
 		command := scanner.Text()

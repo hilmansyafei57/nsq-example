@@ -37,8 +37,9 @@ func New() (nff *NsqFireForget, err error) {
 func (nff *NsqFireForget) NsqHandler() (err error) {
 	config := nsq.NewConfig()
 	chanelName := nff.env.Nsq.ChanelName
+	topicName := nff.env.Nsq.TopicName
 	log.Println("Chanel NSQ Name", nff.env.Nsq)
-	consum, err := nsq.NewConsumer(chanelName, "ch", config)
+	consum, err := nsq.NewConsumer(topicName, chanelName, config)
 	if err != nil {
 		return err
 	}
