@@ -8,7 +8,7 @@ import (
 
 	"github.com/nsqio/go-nsq"
 
-	platform "github.com/firdasafridi/example-nsq"
+	platform "github.com/hilmansyafei57/nsq-example"
 )
 
 type NsqProducer struct {
@@ -63,6 +63,10 @@ func (np *NsqProducer) Publish(b []byte) (err error) {
 
 func (np *NsqProducer) CmdHandler() {
 	scanner := bufio.NewScanner(os.Stdin)
+
+	for i := 0; i < 1000; i++ {
+		np.Publish([]byte("test"))
+	}
 
 	for scanner.Scan() {
 		command := scanner.Text()

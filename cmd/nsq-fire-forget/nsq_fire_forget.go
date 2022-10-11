@@ -5,7 +5,7 @@ import (
 	"os"
 	"os/signal"
 
-	nsqfireforget "github.com/firdasafridi/example-nsq/internal/pkg/nsq-fire-forget"
+	nsqfireforget "github.com/hilmansyafei57/nsq-example/internal/pkg/nsq-fire-forget"
 )
 
 func main() {

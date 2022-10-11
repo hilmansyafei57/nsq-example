@@ -5,7 +5,7 @@ import (
 
 	"github.com/nsqio/go-nsq"
 
-	platform "github.com/firdasafridi/example-nsq"
+	platform "github.com/hilmansyafei57/nsq-example"
 )
 
 type NsqFireForget struct {

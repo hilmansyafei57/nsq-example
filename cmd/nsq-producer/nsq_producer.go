@@ -5,7 +5,7 @@ import (
 	"os"
 	"os/signal"
 
-	nsqproducer "github.com/firdasafridi/example-nsq/internal/pkg/nsq-producer"
+	nsqproducer "github.com/hilmansyafei57/nsq-example/internal/pkg/nsq-producer"
 )
 
 func main() {
