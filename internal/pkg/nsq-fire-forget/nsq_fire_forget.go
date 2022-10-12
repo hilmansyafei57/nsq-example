@@ -53,7 +53,7 @@ func (nff *NsqFireForget) NsqHandler() (err error) {
 }
 
 func message(message *nsq.Message) error {
-	// log.Printf("Got a message: %v\n", message)
 	log.Printf("Receive message %s\n", string(message.Body))
+	message.Finish()
 	return nil
 }
